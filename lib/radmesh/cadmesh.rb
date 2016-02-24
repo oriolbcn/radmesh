@@ -90,6 +90,7 @@ module RADMesh
              :bounding_diameter, :float,
              :shortest_edge, :float,
              :volume, :float,
+             :surface_area, :float,
              :number_of_blocks, :uint,
              :connected_edges, :int,
              :connected_facets_1_edge, :int,
@@ -174,6 +175,7 @@ module RADMesh
     attach_function :stl_calculate_normal, [:pointer, :pointer], :void
     attach_function :stl_normalize_vector, [:pointer], :void
     attach_function :stl_calculate_volume, [:pointer], :void
+    attach_function :stl_calculate_surface_area, [:pointer], :void
 
     attach_function :stl_repair, [:pointer, :int, :int, :int,
                                   :float, :int, :float, :int,

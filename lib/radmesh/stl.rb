@@ -97,6 +97,7 @@ module RADMesh
     # @macro returnself
     def calculate_volume!
       CADMesh.stl_calculate_volume(@stl_ptr)
+      CADMesh.stl_calculate_surface_area(@stl_ptr)
       self
     end
 
